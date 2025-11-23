@@ -1,3 +1,14 @@
+# Dot source the Graph helper script
+. "$PSScriptRoot\..\Utility\Connect-Graph.ps1"
+
+# Then call the function with the scopes you need
+Connect-LatiGraph -Scopes @(
+    "User.Read.All",
+    "User.ReadWrite.All",
+    "Directory.Read.All",
+    "Directory.ReadWrite.All"
+)
+
 <#
 .SYNOPSIS
 Exports a basic user report from Microsoft Entra ID using Microsoft Graph.
