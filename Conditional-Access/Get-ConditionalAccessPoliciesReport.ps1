@@ -1,3 +1,14 @@
+# Dot source the Graph helper script
+. "$PSScriptRoot\..\Utility\Connect-Graph.ps1"
+
+# Then call the function with the scopes you need
+Connect-LatiGraph -Scopes @(
+    "User.Read.All",
+    "User.ReadWrite.All",
+    "Directory.Read.All",
+    "Directory.ReadWrite.All"
+)
+
 <#
 .SYNOPSIS
 Exports a report of all Microsoft Entra ID Conditional Access policies.
